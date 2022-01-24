@@ -55,19 +55,45 @@ class OrderServiceTest {
     }
 
     @Test
-    void getOrderByStatusTest(){
+    void getOrderByStatusTest() {
         List<Order> result = orderService.findOrdersByStatus("pending");
         assertEquals(3, result.size());
         assertEquals(3, result.get(0).getProducts().size());
     }
 
     @Test
-    void countOrdersByStatus(){
+    void countOrdersByStatus() {
         List<Order> result = orderService.findOrdersByStatus("pending");
         assertEquals(3, result.size());
         assertEquals(3, result.get(0).getProducts().size());
     }
 
+    @Test
+    void getOrdersBetweenDate() {
+        List<Order> result = orderService.findOrdersByStatus("pending");
+        assertEquals(3, result.size());
+        assertEquals(3, result.get(0).getProducts().size());
+    }
 
+    @Test
+    void mostPruductinOrders() {
+        List<Order> result = orderService.findOrdersByStatus("pending");
+        assertEquals(3, result.size());
+        assertEquals(3, result.get(0).getProducts().size());
+    }
+
+    @Test
+    void isOrderWithLessProcuctThan() {
+        List<Order> result = orderService.findOrdersByStatus("pending");
+        assertEquals(3, result.size());
+        assertEquals(3, result.get(0).getProducts().size());
+    }
+
+    @Test
+    void getOrderByProductCategory() {
+        List<Order> result = orderService.getOrderByProductCategory("Book");
+        assertEquals(3, result.size());
+        assertEquals(3, result.get(0).getProducts().size());
+    }
 
 }

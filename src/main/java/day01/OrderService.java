@@ -2,6 +2,8 @@ package day01;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -34,4 +36,30 @@ public class OrderService {
                 .filter(order -> order.getOrderDate().isAfter(start) && order.getOrderDate().isBefore(end))
                 .collect(Collectors.toList());
     }
+
+    public boolean isOrderWithLessProcuctThan(int minimalProducts) {
+//        return orders.stream().anyMatch(order -> order.getProducts().size() < minimalProducts);
+
+        return !orders.stream()
+//                .mapToInt(orders.size())
+
+                .filter(o -> o.getProducts().size() < minimalProducts)
+                .collect(Collectors.toList()).isEmpty();
+    }
+
+    public List<Order> getOrderMostOfProcuct() {
+        return orders.stream()
+                .sorted(Collections.reverseOrder(Comparator.comparing(o -> o.getProducts().size())))
+//                .filter(order -> order.getProducts().size() >= products.size())
+                .collect(Collectors.toList());
+    }
+
+    public List<Order> getOrderByProductCategory(String category) {
+        return orders.stream()
+                .filter(order -> order.getProducts()
+                        .stream().anyMatch(p -> p.getCategory().equals(category)))
+                .collect(Collectors.toList());
+    }
+
+
 }
