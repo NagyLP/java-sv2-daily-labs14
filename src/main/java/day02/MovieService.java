@@ -16,7 +16,7 @@ public class MovieService {
                 .toList();
     }
 
-    public int getLongestMovies(String movie) {
+    public int getLongestMovies() {
         return movies.stream()
                 .mapToInt(m -> m.getLength())
                 .max()
