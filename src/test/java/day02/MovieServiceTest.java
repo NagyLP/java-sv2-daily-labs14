@@ -12,7 +12,7 @@ class MovieServiceTest {
 
     MovieService movieService;
 
-// MovieService    movieService = new MovieService();
+// MovieService movieService = new MovieService();
 
     Movie m1 = new Movie("Tulipános Fanfan", 110, List.of("Vincent Perez", "Kiss Béla", "Nagy László"));
     Movie m2 = new Movie("Fekete tulipán", 100, List.of("Alein Delon", "Nagy László"));
