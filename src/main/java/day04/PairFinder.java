@@ -1,6 +1,8 @@
 package day04;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import static java.util.stream.Collectors.counting;
@@ -41,6 +43,6 @@ public class PairFinder {
     public static void main(String[] args) {
         PairFinder pf = new PairFinder();
         System.out.println(pf.findPairs(new int[]{1, 3, 5, 5, 4, 4, 4, 6}));
+        System.out.println(pf.findPairsInList(Collections.unmodifiableList(new ArrayList<>(Arrays.asList(1, 3, 5, 5, 4, 4, 4, 6)))));
     }
-
 }
