@@ -14,6 +14,7 @@ public class PairFinder {
         int[] result = Arrays.copyOf(arr, arr.length);
         Arrays.sort(result);
 
+
         int count = 0;
         for (int i = 1; i < result.length; i++) {
             if (result[i] == result[i - 1]) {
@@ -35,9 +36,17 @@ public class PairFinder {
     }
 
 
-//    public int findPairs(int[])
-// REKURZIÓ!!!
-
+    // REKURZIÓ!!!
+//    public int findPairsRecurcion(List<Integer> arr) {
+//        if (arr.size() > 0) {
+//            int count = switch (arr.get(0)) {
+//                case arr.get(0) / arr.get(1) == arr.get(0) ? 1 : 0;
+//                default -> 0;
+//            };
+//            return count + findPairs(arr.remove(0));
+//        }
+//        return 0;
+//    }
 
 
     public static void main(String[] args) {
