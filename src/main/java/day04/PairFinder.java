@@ -10,8 +10,8 @@ public class PairFinder {
 
     public int findPairs(int[] arr) {
         int[] result = Arrays.copyOf(arr, arr.length);
-
         Arrays.sort(result);
+
         int count = 0;
         for (int i = 1; i < result.length; i++) {
             if (result[i] == result[i - 1]) {
