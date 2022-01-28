@@ -35,7 +35,7 @@ public class PairFinder {
     }
 
     // REKURZIÓ!!!
-    // Nem teljesen jó, de cserébe sok, és hosszú...
+    // Nem teljesen jó, de cserébe erőforrásigényes, sok, és hosszú...
     public int findPairsRecurcion(int[] arr) {
         Arrays.sort(arr);
         if (arr.length > 1) {
