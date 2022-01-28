@@ -34,9 +34,8 @@ public class PairFinder {
                 .sum();
     }
 
-
     // REKURZIÓ!!!
-    // Nem teljesen jó: sok, hosszú...
+    // Nem teljesen jó, de cserébe sok, és hosszú...
     public int findPairsRecurcion(int[] arr) {
         if (arr.length > 0) {
             int count = switch (arr[0] / arr[1]) {
