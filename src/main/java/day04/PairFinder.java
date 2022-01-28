@@ -37,14 +37,14 @@ public class PairFinder {
     // REKURZIÓ!!!
     // Nem teljesen jó, de cserébe sok, és hosszú...
     public int findPairsRecurcion(int[] arr) {
-        if (arr.length > 0) {
-            int count = switch (arr[0] / arr[1]) {
+        if (arr.length > 1) {
+            return switch (arr[0] / arr[1]) {
                 case 1 -> 1;
                 default -> 0;
             };
-            return count + findPairs(arr);
+            return 1 + findPairsRecurcion(Arrays.copyOfRange(arr, 1, arr.length));
         }
-        return 0;
+
     }
 
 
